@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Samuel Goulart">
+    <meta name="description" content="Bookstore, livros de A a Z">
+    <meta name="keywords" content="livros, editora, escritor">
+    <title>Livraria Online</title>
+    <link rel="shortcut icon" href="./img/icon/book_icon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/home_page/header.css">
+    <link rel="stylesheet" href="./css/home_page/presentation.css">
+    <link rel="stylesheet" href="./css/home_page/nav_categories.css">
+    <link rel="stylesheet" href="./css/home_page/slider_multiple_items.css">
+    <link rel="stylesheet" href="./css/home_page/who_we_are.css">
+    <link rel="stylesheet" href="./css/home_page/localization.css">
+    <link rel="stylesheet" href="./css/home_page/download.css">
+    <link rel="stylesheet" href="./css/home_page/footer.css">
+    <link rel="stylesheet" href="./css/styles_global.css">
+    <link rel="manifest" href="manifest.json" />
+</head>
+
+<body>
+    <!-- 
+        Menu mobilie
+        https://www.youtube.com/watch?v=DnODupiIAiE
+        O menu mobilie eu adicionei uma estilização nele é acrescentei os ícones, input de pesquisa e deixando ele como um menu ancorado.
+     -->
+    <header id="header">
+        <a id="logo" href="./index.html">
+            <img src="./img/icon/Smart Solutions.png" alt="Ícone da loja" >
+            <span>livraria online</span>
+        </a>
+        <nav id="nav">
+
+            <button aria-label="Abrir Menu" id="btn_mobile" aria-haspopup="true" aria-controls="menu"
+                aria-expanded="false">
+                <span id="hamburger"></span>
+            </button>
+
+            <ul id="menu" role="menu">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="#nav_categories">Categorias</a></li>
+                <li><a href="#slider_multiple_items">Livros</a></li>
+                <li><a href="#localization">Localização</a></li>
+            </ul>
+        </nav>
+        <div id="search_entry">
+            <input class="input" type="text" placeholder="Pesquise livros" pattern=".+" required />
+            <button class="submit_lente" type="submit">
+                <img src="./img/icon/magnifying_glass_icon.svg" alt="ícone de lupa">
+            </button>
+        </div>
+
+        <div id="icones_header">
+
+            <a href="./login_and_register.html">
+                <div id="user_login">
+                    <img src="./img/icon/user_login.svg" alt="Ícone de login da conta">
+                    <span>olá, faça seu login ou cadastra-se</span>
+                </div>
+            </a>
+
+            <div id="heart_icon">
+                <img src="./img/icon/heart_icon.svg" alt="Ícone dos favoritos">
+            </div>
+
+            <div id="shopping_cart">
+                <img src="./img/icon/shopping_cart_icon.svg" alt="Ícone de carrinho de compra">
+                <span>R$ 0,00</span>
+            </div>
+        </div>
+
+    </header>
+
+    <!-- V libras -->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+
+    <!-- 
+        As imagens de ilustração eu peguei no site:
+        https://undraw.co/
+        
+        Como diz no site e open source, não possui direito de imagem
+
+        "Você pode usar as ilustrações em qualquer projeto, 
+        comercial ou pessoal, sem atribuição ou quaisquer custos. (Katerina Limpitsoun, 2021)"
+
+     -->
+    <div id="presentation" class="general_formatting">
+        <div id="imgPresentation">
+            <img src="./img/illustration_of_person_reading_book.svg" alt="Ilustração de pessoa lendo livro">
+        </div>
+        <div id="presentationText">
+            <h1>Livros de A a Z</h1>
+            <p>Em nossa loja você encontra livros para todos os gostos. Uma grande variedade. Preços agradáveis.
+                Histórias interessantes.
+            </p>
+            <a href="#slider_multiple_items1">Leitura Gratuita</a>
+        </div>
+    </div>
+
+    <nav id="nav_categories">
+        <div>
+            <h1>CATEGORIAS</h1>
+        </div>
+        <ul id="menu_categories">
+            <div>
+                <li><a href="/">Administração</a></li>
+                <li><a href="/">Autoajuda</a> </li>
+                <li><a href="/">Direito</a></li>
+            </div>
+            <div>
+                <li><a href="/">Didáticos</a></li>
+                <li><a href="/">Mangás</a></li>
+                <div class="dropdown">
+                    <button class="dropbtn"> Outros <img src="./img/icon/triangle.svg" alt="triângulo">
+                    </button>
+                    <div class="dropdown_content">
+                        <a href="#">Literatura Estrangeira</a>
+                        <a href="#">Literatura Infantojuvenil</a>
+                        <a href="#">Literatura Nacional</a>
+                        <a href="#">Medicina</a>
+                    </div>
+                </div>
+            </div>
+        </ul>
+    </nav>
+
+    <!-- 
+        https://www.youtube.com/watch?v=HAn_WEhkcLc
+          O Slider com múltiplos itens, fiz uma adaptação nele para
+        ficar possível colocar as imagens, as informações, é os 
+        botões de ação.
+    -->
+
+    <div id="slider_multiple_items">
+        <div class="carousel_container general_formatting">
+            <div class="carousel_inner">
+                <div class="track">
+                    <div class="card_container">
+                        <div class="card">
+                            <div class="img">
+                                <img src="./img/book_cover/livro_do_Mil_Ao_Milhão.png"
+                                    alt="Capa do livro do Mil ao Milhão">
+                            </div>
+                            <div class="info">
+                                <span class="old_price">R$ 34,90</span>
+                                <span class="price">R$ 29,90</span>
+                                <span class="booksTitle">Do Mil ao Milhão</span>
+                                <span class="author">Nigro Thiago</span>
+                            </div>
+                            <div class="footerCard">
+                                <a href="/">SAIBA MAIS</a>
+                                <img class="addToFavoritesIcon" src="./img/icon/heart_icon.svg"
+                                    alt="Icone de adicionar aos favoritos">
+                                <img class="shopping_cart_icon" src="./img/icon/shopping_cart_icon.svg"
+                                    alt="Icone de Carrinho de compra">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card_container">
+                        <div class="card">
+                            <div class="img">
+                                <img src="./img/book_cover/ansiedade_como_enfrentar_o_mal_do_seculo.jpg"
+                                    alt="Capa do livro Ansiedade como enfretar o mal do século">
+                            </div>
+                            <div class="info">
+                                <span class="price" style="color: green;">GRATUITO</span>
+                                <span class="booksTitle">Ansiedade: Como Enfrentar O Mal Do Século</span>
+                                <span class="author">Augusto Cruy</span>
+                            </div>
+                            <div class="footerCard">
+                                <a href="/">SAIBA MAIS</a>
+                                <img class="addToFavoritesIcon" src="./img/icon/heart_icon.svg"
+                                    alt="Icone de adicionar aos favoritos">
+                                <img class="shopping_cart_icon" src="./img/icon/shopping_cart_icon.svg"
+                                    alt="Icone de Carrinho de compra">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card_container">
+                        <div class="card">
+                            <div class="img">
+                                <img src="./img/book_cover/uma_breve_historia_do_tempo.jpg"
+                                    alt="Capa do livro uma breve história do tempo">
+                            </div>
+                            <div class="info">
+                                <span class="old_price">R$ 49,90</span>
+                                <span class="price">R$ 38,90</span>
+                                <span class="booksTitle">Uma Breve História do Tempo</span>
+                                <span class="author">Stephen Hawking</span>
+                            </div>
+                            <div class="footerCard">
+                                <a href="/">SAIBA MAIS</a>
+                                <img class="addToFavoritesIcon" src="./img/icon/heart_icon.svg"
+                                    alt="Icone de adicionar aos favoritos">
+                                <img class="shopping_cart_icon" src="./img/icon/shopping_cart_icon.svg"
+                                    alt="Icone de Carrinho de compra">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card_container">
+                        <div class="card">
+                            <div class="img">
+                                <img src="./img/book_cover/o_diario_de_anne_frank.jpg"
+                                    alt="Capa do livro o diário de Anne Frank">
+                            </div>
+                            <div class="info">
+                                <span class="price">R$ 40,90</span>
+                                <span class="booksTitle">O Diário de Anne Frank</span>
+                                <span class="author">Anne Frank</span>
+                            </div>
+                            <div class="footerCard">
+                                <a href="/">SAIBA MAIS</a>
+                                <img class="addToFavoritesIcon" src="./img/icon/heart_icon.svg"
+                                    alt="Icone de adicionar aos favoritos">
+                                <img class="shopping_cart_icon" src="./img/icon/shopping_cart_icon.svg"
+                                    alt="Icone de Carrinho de compra">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card_container">
+                        <div class="card">
+                            <div class="img">
+                                <img src="./img/book_cover/codigo_limpo.jpg" alt="Capa do livro código limpo">
+                            </div>
+                            <div class="info">
+                                <span class="old_price">R$ 55,90</span>
+                                <span class="price">R$ 48,90</span>
+                                <span class="booksTitle">Código limpo - Habilidades práticas do Agile Software</span>
+                                <span class="author">Robert Cecil Martin</span>
+                            </div>
+                            <div class="footerCard">
+                                <a href="/">SAIBA MAIS</a>
+                                <img class="addToFavoritesIcon" src="./img/icon/heart_icon.svg"
+                                    alt="Icone de adicionar aos favoritos">
+                                <img class="shopping_cart_icon" src="./img/icon/shopping_cart_icon.svg"
+                                    alt="Icone de Carrinho de compra">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card_container">
+                        <div class="card">
+                            <div class="img">
+                                <img src="./img/book_cover/o_homem_mais_rico_da_babilonia.jpg"
+                                    alt="Capa do livro o homem mais rico da babilônia">
+                            </div>
+                            <div class="info">
+                                <span class="old_price">R$ 29,90</span>
+                                <span class="price">R$ 24,90</span>
+                                <span class="booksTitle">O Homem Mais Rico da Babilônia</span>
+                                <span class="author"> George S</span>
+                            </div>
+                            <div class="footerCard">
+                                <a href="/">SAIBA MAIS</a>
+                                <img class="addToFavoritesIcon" src="./img/icon/heart_icon.svg"
+                                    alt="Icone de adicionar aos favoritos">
+                                <img class="shopping_cart_icon" src="./img/icon/shopping_cart_icon.svg"
+                                    alt="Icone de Carrinho de compra">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card_container">
+                        <div class="card">
+                            <div class="img">
+                                <img src="./img/book_cover/o_poder_do_habito.jpg" alt="Capa do livro o poder do hábito">
+                            </div>
+                            <div class="info">
+                                <span class="old_price">R$ 64,90</span>
+                                <span class="price" style="color: green;">GRATUITO</span>
+                                <span class="booksTitle">O Poder do Hábito </span>
+                                <span class="author">Charles Duhigg</span>
+                            </div>
+                            <div class="footerCard">
+                                <a href="/">SAIBA MAIS</a>
+                                <img class="addToFavoritesIcon" src="./img/icon/heart_icon.svg"
+                                    alt="Icone de adicionar aos favoritos">
+                                <img class="shopping_cart_icon" src="./img/icon/shopping_cart_icon.svg"
+                                    alt="Icone de Carrinho de compra">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card_container">
+                        <div class="card">
+                            <div class="img">
+                                <img src="./img/book_cover/star_wars_phasma.jpg" alt="Livro do star wars phasna">
+                            </div>
+                            <div class="info">
+                                <span class="old_price">R$ 54,90</span>
+                                <span class="price">R$ 42,90</span>
+                                <span class="booksTitle">Star Wars - Phasma</span>
+                                <span class="author"> Dawson, Delilah S</span>
+                            </div>
+                            <div class="footerCard">
+                                <a href="/">SAIBA MAIS</a>
+                                <img class="addToFavoritesIcon" src="./img/icon/heart_icon.svg"
+                                    alt="Icone de adicionar aos favoritos">
+                                <img class="shopping_cart_icon" src="./img/icon/shopping_cart_icon.svg"
+                                    alt="Icone de Carrinho de compra">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="nav">
+                <button class="prev">
+                    <img src="./img/icon/left_arrow_icon.svg" alt="ícone de seta para o lado  direito">
+                </button>
+                <button class="next">
+                    <img src="./img/icon/right_arrow_icon.svg" alt="ícone de seta para o lado  esquerdo">
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div id="slider_multiple_items1">
+        <h1>Livros gratuitos mais populares</h1>
+        <div class="carousel_container carousel_container1">
+            <div class="carousel_inner">
+                <div class="track track1">
+                    <div class="card_container">
+                        <div class="card">
+                            <div class="img">
+                                <a href="./pdf/1-O-Morro-Dos-Ventos-Uivantes-Emily-Brontë.pdf" target="_blank">
+                                    <img src="./img/book_cover/o_morro_dos_ventos_uivantes.jpg" alt="Capa do livro o morro dos ventos uivantes">
+                                </a>
+                            </div>
+                            <div class="info">
+                                <span class="price" style="color: green;">GRATUITO</span>
+                                <span class="booksTitle">O morro dos ventos uivantes</span>
+                                <span class="author">Emily Brontë</span>
+                            </div>
+                            
+                            <div class="footerCard">
+                                <a href="/">SAIBA MAIS</a>
+                                <img class="addToFavoritesIcon" src="./img/icon/heart_icon.svg"
+                                    alt="Icone de adicionar aos favoritos">
+                                <img class="shopping_cart_icon" src="./img/icon/shopping_cart_icon.svg"
+                                    alt="Icone de Carrinho de compra">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card_container">
+                        <div class="card">
+                            <div class="img">
+                                <a href="./pdf/O-Milagre-Da-Manhã-Hal-Elrod.pdf" target="_blank">
+                                    <img src="./img/book_cover/o_milagre_da_manha.jpg" alt="Capa do livro O milagre da manhã">
+                                </a>
+                            </div>
+                            <div class="info">
+                                <span class="old_price">R$ 39,90</span>
+                                <span class="price" style="color: green;">GRATUITO</span>
+                                <span class="booksTitle">O milagre da manhã</span>
+                                <span class="author">Hal Elrod</span>
+                            </div>
+                            
+                            <div class="footerCard">
+                                <a href="/">SAIBA MAIS</a>
+                                <img class="addToFavoritesIcon" src="./img/icon/heart_icon.svg"
+                                    alt="Icone de adicionar aos favoritos">
+                                <img class="shopping_cart_icon" src="./img/icon/shopping_cart_icon.svg"
+                                    alt="Icone de Carrinho de compra">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card_container">
+                        <div class="card">
+                            <div class="img">
+                                <a href="./pdf/Mais Esperto que o Diabo.pdf" target="_blank">
+                                    <img src="./img/book_cover/mais_esperto_que_o_diabo.jpg" alt="Capa do livro Mais esperto que o Diabo">
+                                </a>
+                            </div>
+                            <div class="info">
+                                <span class="price" style="color: green;">GRATUITO</span>
+                                <span class="booksTitle">Mais esperto que o Diabo</span>
+                                <span class="author">Nigro Thiago</span>
+                            </div>
+                            
+                            <div class="footerCard">
+                                <a href="/">SAIBA MAIS</a>
+                                <img class="addToFavoritesIcon" src="./img/icon/heart_icon.svg"
+                                    alt="Icone de adicionar aos favoritos">
+                                <img class="shopping_cart_icon" src="./img/icon/shopping_cart_icon.svg"
+                                    alt="Icone de Carrinho de compra">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card_container">
+                        <div class="card">
+                            <div class="img">
+                                <a href="./pdf/revolucao-dos-bichos.pdf" target="_blank">
+                                    <img src="./img/book_cover/a_revolucao_dos_bichos.jpg" alt="Capa do livro A revolução dos bichos">
+                                </a>
+                            </div>
+                            <div class="info">
+                                <span class="old_price">R$ 29,90</span>
+                                <span class="price" style="color: green;">GRATUITO</span>
+                                <span class="booksTitle">A revolução dos bichos</span>
+                                <span class="author">George Orwell</span>
+                            </div>
+                            
+                            <div class="footerCard">
+                                <a href="/">SAIBA MAIS</a>
+                                <img class="addToFavoritesIcon" src="./img/icon/heart_icon.svg"
+                                    alt="Icone de adicionar aos favoritos">
+                                <img class="shopping_cart_icon" src="./img/icon/shopping_cart_icon.svg"
+                                    alt="Icone de Carrinho de compra">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card_container">
+                        <div class="card">
+                            <div class="img">
+                                <a href="./pdf/A coragem de ser imperfeito Co - Brene Brown.pdf" target="_blank">
+                                    <img src="./img/book_cover/a_coragem_de_ser_imperfeito.jpg" alt="Capa do livro A coragem de ser imperfeito">
+                                </a>
+                            </div>
+                            <div class="info">
+                                <span class="old_price">R$ 39,90</span>
+                                <span class="price" style="color: green;">GRATUITO</span>
+                                <span class="booksTitle">A coragem de ser imperfeito</span>
+                                <span class="author">Brené Brown</span>
+                            </div>
+                            
+                            <div class="footerCard">
+                                <a href="/">SAIBA MAIS</a>
+                                <img class="addToFavoritesIcon" src="./img/icon/heart_icon.svg"
+                                    alt="Icone de adicionar aos favoritos">
+                                <img class="shopping_cart_icon" src="./img/icon/shopping_cart_icon.svg"
+                                    alt="Icone de Carrinho de compra">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card_container">
+                        <div class="card">
+                            <div class="img">
+                                <img src="./img/book_cover/mindset_a_nova_psicologia_do_sucesso.jpg"
+                                    alt="Capa do livro Mindset: A nova psicologia do sucesso,">
+                            </div>
+                            <div class="info">
+                                <span class="old_price">R$ 49,90</span>
+                                <span class="price"style="color: green;">GRATUITO</span>
+                                <span class="booksTitle">Mindset: A nova psicologia do sucesso</span>
+                                <span class="author">Carol S. Dweck</span>
+                            </div>
+                            <div class="footerCard">
+                                <a href="/">SAIBA MAIS</a>
+                                <img class="addToFavoritesIcon" src="./img/icon/heart_icon.svg"
+                                    alt="Icone de adicionar aos favoritos">
+                                <img class="shopping_cart_icon" src="./img/icon/shopping_cart_icon.svg"
+                                    alt="Icone de Carrinho de compra">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card_container">
+                        <div class="card">
+                            <div class="img">
+                                <img src="./img/book_cover/o_conto_da_aia.jpg" alt="Capa do livro O conto da aia">
+                            </div>
+                            <div class="info">
+                                <span class="old_price">R$ 69,90</span>
+                                <span class="price"style="color: green;">GRATUITO</span>
+                                <span class="booksTitle">O conto da aia</span>
+                                <span class="author">Margaret Atwood</span>
+                            </div>
+                            <div class="footerCard">
+                                <a href="/">SAIBA MAIS</a>
+                                <img class="addToFavoritesIcon" src="./img/icon/heart_icon.svg"
+                                    alt="Icone de adicionar aos favoritos">
+                                <img class="shopping_cart_icon" src="./img/icon/shopping_cart_icon.svg"
+                                    alt="Icone de Carrinho de compra">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card_container">
+                        <div class="card">
+                            <div class="img">
+                                <img src="./img/book_cover/essencialismo_a_disciplinada_busca.jpg"
+                                    alt="Capa do livro Essencialismo: A disciplinada busca">
+                            </div>
+                            <div class="info">
+                                <span class="old_price">R$ 49,90</span>
+                                <span class="price"style="color: green;">GRATUITO</span>
+                                <span class="booksTitle">Essencialismo: A disciplinada busca</span>
+                                <span class="author">Greg Mckeown</span>
+                            </div>
+                            <div class="footerCard">
+                                <a href="/">SAIBA MAIS</a>
+                                <img class="addToFavoritesIcon" src="./img/icon/heart_icon.svg"
+                                    alt="Icone de adicionar aos favoritos">
+                                <img class="shopping_cart_icon" src="./img/icon/shopping_cart_icon.svg"
+                                    alt="Icone de Carrinho de compra">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="nav">
+                <button class="prev prev1">
+                    <img src="./img/icon/left_arrow_icon.svg" alt="ícone de seta para o lado  direito">
+                </button>
+                <button class="next next1">
+                    <img src="./img/icon/right_arrow_icon.svg" alt="ícone de seta para o lado  esquerdo">
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <section id="who_we_are" class="general_formatting">
+        <h1>Quem nós somos</h1>
+        <p>
+            A Smart Solutions é uma livraria que atende por e commerce, por meio do website
+            www.Smartsolutions.com e de nossa extensa comunidade online, também alcançamos leitores em todo o Brasil,
+            pessoas tão entusiasmadas com os livros quanto nós.
+        </p>
+        <p>
+            Estamos alicerçados nos valores fundamentais da nossa empresa, que nos guiaram nos altos e baixos da
+            indústria de livreiros. 
+            O amor de cada funcionário pelos livros nos impulsiona para a frente.
+        </p>
+        <p>
+            Estamos ansiosos para um futuro repleto de muitas novas oportunidades, inovações e, claro, novos livros!
+        </p>
+    </section>
+
+    <section id="localization" class="general_formatting">
+        <h1>Nossa Localização</h1>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.1049090669526!2d-46.900181785384696!3d-23.528728866272377!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cf0154039cb55b%3A0xadf34a919f156950!2sSENAI%20Jandira%20-%20Professor%20Vicente%20Amato!5e0!3m2!1spt-BR!2sbr!4v1631053364159!5m2!1spt-BR!2sbr" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </section>
+
+    <div id="download">
+        <div id="img_dowload">
+            <img src="./img/download_illustration.svg"
+                alt="Imagem de inlustração de uma pessoa fazendo o dowload de um aplicativo no smartphone">
+        </div>
+        <div id="download_presentation">
+            <h1>Baixe o aplicativo para desfrutar mais!</h1>
+            <div id="text_dowload">
+                <p>Simples é fácil abaixar o aplixativo, ocupa pouco espaço na memória do seu Smartphone.</p>
+                <p>Pelo Google Chrome no (Android), você pode fazer o download</p>
+                <ol>
+                    <li>Basta abrir o nosso web site no navegador</li>
+                    <li>Tocar no ícone de três pontos </li>
+                    <li>Selecionar "Instalar aplicativo"</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div>
+            <hr>
+        </div>
+        <div id="text_footer">
+            <div id="div_msg">
+                <div id="img_footer">
+                    <img src="./img/icon/book_white_icon.svg" alt="logo">
+                    <p>Bookstore</p>
+                </div>
+                <p>Os Livros nos dão asas para voar a lugares altos, supreendentes e inesquecíveis</p>
+            </div>
+            <div class="links_footer">
+                <h1> Links Rápidos</h1>
+                <ul>
+                    <li>
+                        <a href="/">
+                            <img src="./img/icon/angle-double-right.svg" alt="Ícone de dupla seta para direita">
+                            Sobre nós</a>
+                    </li>
+                    <li>
+                        <a href="/">
+                            <img src="./img/icon/angle-double-right.svg" alt="Ícone de dupla seta para direita">
+                            Serviços</a>
+                    </li>
+                    <li>
+                        <a href="/">
+                            <img src="./img/icon/angle-double-right.svg" alt="Ícone de dupla seta para direita">
+                            Projetos</a>
+                    </li>
+                    <li>
+                        <a href="/">
+                            <img src="./img/icon/angle-double-right.svg" alt="Ícone de dupla seta para direita"> Nosso
+                            time</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="links_footer">
+                <h1>Links Rápidos</h1>
+                <ul>
+                    <li><a href="/">
+                            <img src="./img/icon/angle-double-right.svg" alt="Ícone de dupla seta para direita"> Contate
+                            - Nos</a></li>
+                    <li><a href="/">
+                            <img src="./img/icon/angle-double-right.svg" alt="Ícone de dupla seta para direita">
+                            Blog</a>
+                    </li>
+                    <li><a href="/"><img src="./img/icon/angle-double-right.svg" alt="Ícone de dupla seta para direita">
+                            Nossa localização</a></li>
+                    <li><a href="/"><img src="./img/icon/angle-double-right.svg" alt="Ícone de dupla seta para direita">
+                            Entrega</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="social_networks">
+            <img src="./img/icon/icon_youtube.svg" alt="Ícone do youtube">
+            <img src="./img/icon/icon_instagram.svg" alt="Ícone do instragram">
+            <img src="./img/icon/icon_facebook.svg" alt="Ícone do facebook">
+            <img src="./img/icon/icon_twitter.svg" alt="Ícone do twitter">
+        </div>
+        <div id="copyright">
+            <div>
+                <p>©copyright</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/header.js"></script>
+    <script src="./js/slider_multiple_items.js"></script>
+
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+
+</body>
+
+</html>
